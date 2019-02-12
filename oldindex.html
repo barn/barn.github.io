@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="cal-heatmap-master/cal-heatmap.css" />
+
+<script type="text/javascript" src="d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="cal-heatmap-master/cal-heatmap.min.js" charset="utf-8"></script>
+
+
+<div id="cal-heatmap"></div>
+<script type="text/javascript">
+    var cal = new CalHeatMap();
+    cal.init({
+        data: "datas.json",
+        start: new Date(2014, 0, 1),   // Start the calendar on 15th January, 2000
+        id : "graph",
+        domain : "month",                 // Group data by days
+        subDomain : "day",             // Split each day by hours
+        range : 12,                     // Number of days to display
+        browsing: true                 // Enable browsing
+    });
+</script>
